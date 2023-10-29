@@ -44,7 +44,7 @@ else
 end
 
 # case permet de remplacer une structure if/else qui serait trop longue.
-# L'opérateur de comparaison est === ce qui force à avoir également le même type
+# L'opérateur de comparaison est ===
 # else donne une possibilité d'action sur tous les autres cas
 # On utilise case avec une expression de comparaison lorsque l'on compare une variable à des valeurs spécifiques
 
