@@ -17,20 +17,25 @@ end
 print "Vous êtes majeur\n" if age >= 18
 
 
+# unless vérifie l'inverse de la condition, il est l'oposé de if. Privilégier cette formule face à !condition
+# Par convention nous n'utilisons pas de else avec unless mais if !condition
+
 unless age < 18
   print "Vous êtes majeur\n"
 else
   print "Vous êtes mineur\n"
 end
 
-# unless vérifie l'inverse de la condition, il est l'oposé de if. Privilégier cette formule face à !condition
-# Par convention nous n'utilisons pas de else avec unless mais if !condition
-
-
-print "Vous êtes mineur\n" unless age >= 18
 
 # Condition unless sur une ligne
 
+print "Vous êtes mineur\n" unless age >= 18
+
+
+# case permet de remplacer une structure if/else qui serait trop longue.
+# L'opérateur de comparaison est ===
+# else donne une possibilité d'action sur tous les autres cas
+# On utilise case avec une expression de comparaison lorsque l'on compare une variable à des valeurs spécifiques
 
 case age
 when 1
@@ -43,11 +48,8 @@ else
   print "Vous avez plus de trois ans\n"
 end
 
-# case permet de remplacer une structure if/else qui serait trop longue.
-# L'opérateur de comparaison est ===
-# else donne une possibilité d'action sur tous les autres cas
-# On utilise case avec une expression de comparaison lorsque l'on compare une variable à des valeurs spécifiques
 
+# On utilise case sans expression de comparaison lorsque l'on utilise des expressions booléennes complexes
 
 case
 when age < 0
@@ -62,8 +64,9 @@ else
   print "Comment est-ce possible ?\n"
 end
 
-# On utilise case sans expression de comparaison lorsque l'on utilise des expressions booléennes complexes
 
+# On peut utiliser case pour vérifier un intervalle.
+# En ruby les plages sont inclusives donc 7..12 prend en compte 7, 8, 9, 10, 11, 12
 
 case age
 when 0..3
@@ -80,10 +83,7 @@ else
   print "Vous avez votre Bac\n"
 end
 
-# On peut utiliser case pour vérifier un intervalle.
-# En ruby les plages sont inclusives donc 7..12 prend en compte 7, 8, 9, 10, 11, 12
-
-
-(age < 18) ? (print "Mineur") : (print "Majeur")
 
 # condition ternaire qui permet un if else sur une ligne
+
+(age < 18) ? (print "Mineur") : (print "Majeur")
